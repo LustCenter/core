@@ -17,8 +17,8 @@ module.exports = {
         allowedSenders: [],
         dynamicFees: {
             enabled: true,
-            minFeePool: 3000,
-            minFeeBroadcast: 3000,
+            minFeePool: 1000,
+            minFeeBroadcast: 1000,
             addonBytes: {
                 transfer: 100,
                 secondSignature: 250,
@@ -28,13 +28,13 @@ module.exports = {
                 ipfs: 250,
                 timelockTransfer: 500,
                 multiPayment: 500,
-                delegateResignation: 100,
+                delegateResignation: 400000,
             },
         },
     },
     "@arkecosystem/core-p2p": {
         server: {
-            port: process.env.CORE_P2P_PORT || 4001,
+            port: process.env.CORE_P2P_PORT || 4002,
         },
     },
     "@arkecosystem/core-blockchain": {},
